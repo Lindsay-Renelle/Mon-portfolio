@@ -1,6 +1,6 @@
 # Mon-portfolio
 ## Description
- Ce projet est un portfolio en ligne créé par Vue.js. J'ai utilisé les langages (html, css, javascript) pour le codage. Il a pour but de présenter mon parcours, mes nouvelles compétences et mes réalisations en déveleppement Web faîte au cours de ma formation en CEF.
+ Ce projet est un portfolio en ligne créé par Vue.js. J'ai utilisé les langages (html, css, javascript) pour le codage. Il a pour objectif de présenter mon parcours, mes nouvelles compétences et mes réalisations en déveleppement Web faîte au cours de ma formation en CEF.
 
 ## Prérequis  
 Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur votre machine :
