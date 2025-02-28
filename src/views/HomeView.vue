@@ -1,9 +1,10 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+// Supprime l'importation de TheWelcome
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <!-- Supprime le composant TheWelcome -->
   </main>
 </template>
+

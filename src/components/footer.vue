@@ -11,12 +11,7 @@
   </script>
   
   <style scoped>
-  footer {
-    background-color: #black;
-    color: white;
-    padding: 10px;
-    text-align: center;
-  }
+
   </style>
   
   

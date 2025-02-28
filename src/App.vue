@@ -1,48 +1,69 @@
 <template>
   <div id="app">
-    <Header /> <!-- Utiliser le composant Header ici -->
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-    <router-view />
-    <Footer /> <!-- Utiliser le composant Footer ici -->
+    <!-- Ajout du Header -->
+    <Header />
+    <header class="entete-contenu">
+      <div class="section-gauche">
+        <img src="@/assets/img-portfolio/Img-acceuil.jpg" alt="Image de bienvenue" class="image-gauche" />
+      </div>
+      <h1 class="texte-bienvenue">Bienvenue sur mon portfolio</h1>
+    </header>
+    <!-- Contenu principal où sont affichées les pages dynamiques -->
+    <main class="contenu-principal">
+      <router-view></router-view>
+    </main>
+    <!-- Ajout du Footer -->
+    <Footer />
   </div>
 </template>
 
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import Header from './components/Header.vue' // Importation du composant Header
-import Footer from './components/Footer.vue' // Importation du composant Footer
+<script>
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Header,
+    Footer
+  }
+}
 </script>
 
-<style scoped>
-/* Ajoute tes styles personnalisés ici */
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  text-align: left;
+  color: white;
+  background-color: #030660;
+  margin: 0;
+  padding: 20px;
   min-height: 100vh;
 }
-.wrapper {
-  text-align: center;
-  margin-top: 60px;
-}
-nav {
+
+.entete-contenu {
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
 }
-nav a {
-  color: #42b983;
-  text-decoration: none;
+.section-gauche {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-nav a:hover {
-  text-decoration: underline;
+.image-gauche {
+  width: 150px;
+  height: auto;
+  margin-top: 10px;
+}
+.texte-bienvenue {
+  flex: 1;
+  text-align: right;
+  font-size: 1.5rem;
+}
+.contenu-principal {
+  padding: 20px;
 }
 </style>
