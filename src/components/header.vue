@@ -1,7 +1,5 @@
 <template>
-  <header class="conteneur-entete">
-    <!--Titre-->
-    <h1 class="titre">DUBOIS Céline</h1>
+  <header class="entete">
     <!--Barre de navigation-->
     <nav class="barre-navigation">
       <ul>
@@ -16,46 +14,23 @@
 </template>
 
 <style scoped>
-/* Conteneur de l'en-tête */
-.conteneur-entete {
-  /*Dispositon du contenu en ligne*/
-  display: flex;
-  /*Espacement égal entre les éléments*/
-  justify-content: space-between;
-  /*Espacement égal entre les éléments*/
-  align-items: center;
-  /* Fixer l'en-tête en haut de la page */
-  position: fixed; 
-  /*Largeur de l'entête*/
-  width: 100%;
-  /*Espace interne autour d du conteneur'*/
+  /* Conteneur de la barre de navigation */
+
+  .barre-navigation {
+    position: fixed;
+  top: 0;
+  right: 0;
+  left: auto; /* Laisse la marge à droite */
+  width: auto; /* Au lieu de 100%, pour éviter qu'elle disparaisse */
+  background-color: #f4D7C8;
+  height: 100px;
+  z-index: 10;
   padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+
 }
 
-/* Style du titre */
-.titre {
-  /*Taille de police*/
-  font-size: 3em;
-  /*Supprimer la marge par défaut*/
-  margin: 0;
-}
-
-/* Conteneur de la barre de navigation */
-.barre-navigation {
- /*Couleur de fond de la barre de navigation*/
- background-color:#f4D7C8 ;
- /*Espacement interne*/
- padding: 20px;
- /*Bordure arrondie*/
- border-radius: 10px;
- /* Permet à la barre de navigation de prendre plus de place */
- flex-grow: 0.1;
- /*Marge*/
- margin-left: 800px;
- margin-right: 40px;
- /*Police*/
- font-size: 20px;
-}
  
 /* Style de la liste de navigation */
 .barre-navigation ul {
@@ -98,10 +73,6 @@
     /* Aligner le texte au centre */
     text-align: center; 
   }
-
-  .barre-navigation ul li a {
-    /* Espacement des liens pour les petits écrans */
-    padding: 5rem 1rem; 
-  }
 }
 </style>
+

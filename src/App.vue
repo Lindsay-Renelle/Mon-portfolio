@@ -2,19 +2,27 @@
   <div id="app">
     <!-- Ajout du Header -->
     <Header />
-    <header class="entete-contenu">
-        <!-- Image de bienvenue -->
-        <img src="@/assets/img-portfolio/Img-acceuil.jpg" alt="Image de bienvenue" class="image-gauche" />
+    <section class="entete-contenu">
+      <!--Titre principal-->
+      <h1>DUBOIS Céline</h1>
+
+      <!-- Image de bienvenue -->
+      <img src="@/assets/img-portfolio/Img-acceuil.jpg" alt="Image de bienvenue" class="image-gauche" />
+
       <!--Conteneur pour le texte-->
       <div class="texte-bienvenue">
-        <h1>Bienvenue sur mon portfolio</h1>
+        <h2>Bienvenue sur mon portfolio</h2>
       </div>
-    </header>
+    </section>
+
     <!-- Contenu principal où sont affichées les pages dynamiques -->
     <main class="contenu-principal">
+      <div class="about-container">
+        <AboutMe />
+      </div>
       <router-view></router-view>
     </main>
-    <!-- Ajout du Footer -->
+    <!-- Ajout Footer -->
     <Footer />
   </div>
 </template>
@@ -22,68 +30,88 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import AboutMe from './components/AboutMe.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Footer
-  }
+    Footer,
+    AboutMe,
+  },
 }
 </script>
 
 <style>
+/* Style du titre */
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
+
 /* Style global pour html */
- body {
+body {
   background-color: #030660;
-  height: 100%; /* Prendre toute la hauteur de la fenêtre */
   margin: 0;
   padding: 0;
+  height: 100%; /* Prends toute la hauteur de la fenêtre */
 }
 
 /* Style global de l'application */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: left;
   color: white;
   margin: 0;
   padding: 20px;
-  /* Prendre toute la hauteur de la fenêtre */
   min-height: 100vh;
-  height: 100%;
+  display: block;
+  flex-direction: column;
+  align-items: center; /* Centre tout le contenu */
+  text-align: center; /* Centre le texte */
 }
 
 /* Conteneur de l'en-tête */
 .entete-contenu {
-  display: flex; /* Disposer les éléments en ligne */
-  align-items: center; /* Alignement vertical */
-  gap: 20px; /* Espacement entre l'image et le texte */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligne tous sur la gauche */
   width: 100%;
-  justify-content: space-between;
+  gap: 10px;  /* Espacement entre l'image et le texte */
 }
 
 /* Image de bienvenue */
 .image-gauche {
-  width: 400px;/*taille image*/
+  width: 400px;
   height: auto;
-  margin-top: 10px;/*Marge entre l'image et l'élement du dessus*/
-  flex-shrink: 0; /* Empêcher l'image de rétrécir */
+  margin-left: 8%;
 }
 
 /* Texte de bienvenue */
 .texte-bienvenue {
-  flex-grow: 1; /* Prendre l'espace restant */
-  font-size: 1.5em; /* Taille de la police */
-  color: white; /* Couleur du texte */
+  font-size: 1.5em;
+  color: white;
   text-align: left;
-  display: block;
-  white-space: nowrap; /* Empêcher le retour à la ligne */
-  overflow: hidden; /* Masquer le débordement */
-  text-overflow: ellipsis; /* Ajouter des points de suspension si le texte déborde */
+  margin-left: 16%;
 }
 
 /* Contenu principal */
 .contenu-principal {
- padding: 20px;
+  width: 100vw; /* Prend toute la largeur */
+  height: auto; /* Ajuste la hauteur */
+  min-height: 300px; /* Assure qu’il est visible */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.about-container {
+  width:50%;
+  max-width: none;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 </style>
