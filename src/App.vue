@@ -16,9 +16,22 @@
     </section>
 
     <!-- Contenu principal où sont affichées les pages dynamiques -->
-    <main class="contenu-principal">
-      <div class="about-container">
-        <AboutMe />
+   
+    <main>
+      <div class="contenu-principal">
+        <QuiSuisJe/>
+        <Competence/>
+        <!--Mes réalisations avec modals-->
+        <section class="bloc-centrale">
+          <h2> Mes réalisations</h2>
+          <div class="modals-row">
+            <div class="modal-item"><Cv/></div>
+            <div class="modal-item"> <CahierDesCharges/></div>
+            <div class="modal-item"><CoeurAPrendre/></div>
+          </div>
+        </section>
+
+        <Contact/>
       </div>
       <router-view></router-view>
     </main>
@@ -29,15 +42,25 @@
 
 <script>
 import Header from './components/Header.vue'
+import QuiSuisJe from './components/QuiSuisJe.vue'
+import Competence from './components/Competence.vue'
+import Cv from './components/Cv.vue'
+import CahierDesCharges from './components/CahierDesCharges.vue'
+import CoeurAPrendre from './components/CoeurAPrendre.vue'
 import Footer from './components/Footer.vue'
-import AboutMe from './components/AboutMe.vue'
+import Contact from './components/Contact.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Footer,
-    AboutMe,
+    QuiSuisJe,
+    Competence,
+    Cv,
+    CahierDesCharges,
+    CoeurAPrendre,
+    Contact,
+    Footer
   },
 }
 </script>
@@ -64,7 +87,7 @@ body {
   margin: 0;
   padding: 20px;
   min-height: 100vh;
-  display: block;
+  display: flex;
   flex-direction: column;
   align-items: center; /* Centre tout le contenu */
   text-align: center; /* Centre le texte */
@@ -76,7 +99,7 @@ body {
   flex-direction: column;
   align-items: flex-start; /* Aligne tous sur la gauche */
   width: 100%;
-  gap: 10px;  /* Espacement entre l'image et le texte */
+  gap: 10px;
 }
 
 /* Image de bienvenue */
@@ -95,23 +118,57 @@ body {
 }
 
 /* Contenu principal */
-.contenu-principal {
-  width: 100vw; /* Prend toute la largeur */
-  height: auto; /* Ajuste la hauteur */
-  min-height: 300px; /* Assure qu’il est visible */
+main {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-around;
+  flex-direction: column; /* Met les blocs en colonne */
+  align-items: center; /* Centre les blocs */
+  gap: 40px; /* Espace entre chaque section */
 }
 
-.about-container {
-  width:50%;
-  max-width: none;
-  padding: 0 20px;
+/* Centrage et largeur des sections principales */
+.contenu-principal > * {
+  width: 250px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+ 
+}
+
+.bloc-centrale {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/*modals*/
+.modal-item {
+  flex: 0 1 100px; /* Ne s'étire pas, garde une base de 300px */
+  height: 150px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.modals-row {
+  display: flex;
+  gap: 20px;
   justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 </style>

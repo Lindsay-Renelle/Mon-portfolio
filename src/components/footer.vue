@@ -2,12 +2,12 @@
     <footer>
       <nav>
             <small class="social">
-                <a class="reseaux__icon" href="https://www.facebook.com/?locale=fr_FR" target="_blank"><img src="../assets/img-portfolio/icon reseaux/facebook 1.png" alt="Facebook" class="social__icon"></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="../assets/img-portfolio/icon reseaux/facebook 1.png" alt="Facebook" class="social__icon"></a>
                 <a href="https://www.linkedin.com/feed/" target="_blank"><img src="../assets/img-portfolio/icon reseaux/linkedin 1.png" alt="Linkedin" class="social__icon1"></a>
                 <a href="https://github.com/Lindsay-Renelle" target="_blank"><img src="../assets/img-portfolio/icon reseaux/github 1.png" alt="GitHub" class="social__icon2"></a>
             </small>
             <p>Dernière mise à jour le <time datetime="2025/03/01">2 Avril 2025</time></p>
-            <p>© 2025. Tous droits réservés.</p>
+            <p>© Tous droits réservés.</p>
           </nav>
     </footer>
   </template>
