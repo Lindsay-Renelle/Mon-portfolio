@@ -20,6 +20,11 @@ h2 {
     margin-top: 15px; /* Espacement entre l’image et le titre */
 }
 
+.contact {
+  margin : auto;
+  padding-top: 30px;
+}
+
 /* SECTION FORMULAIRE */
 .contact form {
     display: flex; /* Utilisation de flexbox pour aligner les éléments */

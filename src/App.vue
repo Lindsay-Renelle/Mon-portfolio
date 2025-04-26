@@ -22,12 +22,12 @@
         <QuiSuisJe/>
         <Competence/>
         <!--Mes réalisations avec modals-->
-        <section class="bloc-centrale">
+        <section class="Bloc-modal">
           <h2> Mes réalisations</h2>
-          <div class="modals-row">
-            <div class="modal-item"><Cv/></div>
-            <div class="modal-item"> <CahierDesCharges/></div>
-            <div class="modal-item"><CoeurAPrendre/></div>
+          <div>
+            <Cv/>
+            <CahierDesCharges/>
+            <CoeurAPrendre/>
           </div>
         </section>
 
@@ -40,7 +40,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Header from './components/Header.vue'
 import QuiSuisJe from './components/QuiSuisJe.vue'
 import Competence from './components/Competence.vue'
@@ -49,20 +49,6 @@ import CahierDesCharges from './components/CahierDesCharges.vue'
 import CoeurAPrendre from './components/CoeurAPrendre.vue'
 import Footer from './components/Footer.vue'
 import Contact from './components/Contact.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Header,
-    QuiSuisJe,
-    Competence,
-    Cv,
-    CahierDesCharges,
-    CoeurAPrendre,
-    Contact,
-    Footer
-  },
-}
 </script>
 
 <style>
@@ -128,47 +114,17 @@ main {
 
 /* Centrage et largeur des sections principales */
 .contenu-principal > * {
-  width: 250px;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 30px;
- 
+  padding: 0 auto;
+  box-sizing: border-box;
 }
 
 .bloc-centrale {
   display: flex;
   align-items: center;
   width: 100%;
-}
-
-/*modals*/
-.modal-item {
-  flex: 0 1 100px; /* Ne s'étire pas, garde une base de 300px */
-  height: 150px;
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  color: white;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.modals-row {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.modal-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  
 }
 </style>

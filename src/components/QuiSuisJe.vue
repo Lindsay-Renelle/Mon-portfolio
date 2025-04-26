@@ -23,10 +23,6 @@
 </template>
 
 
-<script>
-
-</script>
-
 <style>
 .container {
     display: flex;

@@ -14,12 +14,8 @@
         </section>
 </template>
 
-<script>
 
-</script>
-
-
-<style>
+<style scoped>
 h2 {
     font-size: 2em; /* Augmente la taille du titre */
     font-weight: bold;
