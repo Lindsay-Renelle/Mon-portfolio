@@ -2,7 +2,20 @@
   <div v-if="isOpen" class="modal">
     <div class="modal-box">
       <h4>{{ title }}</h4> <!-- Affiche le titre passé en prop -->
+      <p class="date">Date : {{ date }}</p> <!--Date du projet-->
       <p>{{ message }}</p> <!-- Affiche le message passé en prop -->
+      <p class="technologies">Technologies : {{ technologie }}</p> <!--Technologies utilisées-->
+
+       <!-- Affiche le lien GitHub uniquement s’il est fourni -->
+      <p v-if="githubLink" class="lien"> 
+        <a :href= "githubLink" target="_blank">Voir le projet sur GitHub</a>
+      </p>
+
+      <!-- Affiche le lien vers le PDF uniquement s’il est fourni -->
+      <p v-if="pdfLink" class="lien">
+        <a :href="pdfLink" target="_blank">Voir le PDF</a>
+      </p>
+     
       <button @click="$emit('close')">Fermer</button> <!-- Émet l'événement 'close' pour prévenir le parent -->
     </div>
   </div>
@@ -13,7 +26,11 @@
 defineProps({
   isOpen: Boolean,
   title: String,
-  message: String
+  date: String,
+  message: String,
+  technologie: String,
+  githubLink: String,
+  pdfLink: String,
 })
 </script>
 
