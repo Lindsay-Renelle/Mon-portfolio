@@ -1,28 +1,31 @@
 <template>
-  <div v-if="isOpen" class="modal">
-    <div class="modal-box">
-      <h4>{{ title }}</h4> <!-- Affiche le titre passé en prop -->
-      <p class="date">Date : {{ date }}</p> <!--Date du projet-->
-      <p>{{ message }}</p> <!-- Affiche le message passé en prop -->
-      <p class="technologies">Technologies : {{ technologie }}</p> <!--Technologies utilisées-->
+      <!--Modale affichée seulement si "isOpen" est true-->
+      <div
+        v-if="isOpen" class="modal">                                                  
+        <div class="modal-box">
+          <h4>{{ title }}</h4>                                            <!-- Affiche le titre passé en prop -->
+          <p class="date">Date : {{ date }}</p>                           <!--Date du projet-->
+          <p>{{ message }}</p>                                            <!-- Affiche le message passé en prop -->
+          <p class="technologies">Technologies : {{ technologie }}</p>    <!--Technologies utilisées-->
 
-       <!-- Affiche le lien GitHub uniquement s’il est fourni -->
-      <p v-if="githubLink" class="lien"> 
-        <a :href= "githubLink" target="_blank">Voir le projet sur GitHub</a>
-      </p>
+          <!-- Affiche le lien GitHub uniquement s’il est fourni -->
+          <p v-if="githubLink" class="lien"> 
+            <a :href= "githubLink" target="_blank">Voir le projet sur GitHub</a>
+          </p>
 
-      <!-- Affiche le lien vers le PDF uniquement s’il est fourni -->
-      <p v-if="pdfLink" class="lien">
-        <a :href="pdfLink" target="_blank">Voir le PDF</a>
-      </p>
-     
-      <button @click="$emit('close')">Fermer</button> <!-- Émet l'événement 'close' pour prévenir le parent -->
-    </div>
-  </div>
+          <!-- Affiche le lien vers le PDF uniquement s’il est fourni -->
+          <p v-if="pdfLink" class="lien">
+            <a :href="pdfLink" target="_blank">Voir le PDF</a>
+          </p>
+          <div class="modal-button-container">
+            <button @click="$emit('close')">Fermer</button>           <!-- Émet l'événement 'close' pour prévenir le parent -->    
+          </div>           
+        </div>
+      </div>
 </template>
 
 <script setup>
-// On récupère les props envoyées par le parent
+// Récupèration des props envoyées par le parent
 defineProps({
   isOpen: Boolean,
   title: String,
@@ -35,6 +38,7 @@ defineProps({
 </script>
 
 <style scoped>
+/* Fond semi-transparent */
 .modal {
   position: fixed;
   top: 0;
@@ -48,11 +52,36 @@ defineProps({
   z-index: 1000;
 }
 
+/* Contenu de la modale */
 .modal-box {
-  background: white;
+  background: #f4D7C8;
   color: black;
-  padding: 20px;
+  padding: 25px;
   max-width: 500px;
-  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  font-family: Arial, sans-serif;
+}
+
+.modal-box h4 {
+  font-size: 1.6em;
+  margin-bottom: 15px;
+}
+
+a {
+  color: #1abc9c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+ a:hover {
+  text-decoration: underline;
+}
+
+/*Bouton "Fermer"*/
+.modal-button-container {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  margin-top: 20px;        /* Un peu d'espace au-dessus */
 }
 </style>

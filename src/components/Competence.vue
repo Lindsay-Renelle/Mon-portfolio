@@ -1,7 +1,7 @@
 <template>
     <div class="competences">
         <section id="competences" class="competences-container">
-            <h2>Mes compétences</h2>
+            <h3>Mes compétences</h3>
             <p>Actuellement en formation en développement web, j'ai déjà acquis certaines compétences </p>
             <ul>
                 <li>Html 5 - Débutant</li>
@@ -18,9 +18,8 @@
 
 
 <style scoped>
-h2 {
+h3 {
     color: #A8C5E6;
-    font-family: 'Lobster'; /*Police*/
     font-size: 2em; /* Augmente la taille du titre */
     font-weight: bold;
     text-align: center; /* Centre le titre */ 

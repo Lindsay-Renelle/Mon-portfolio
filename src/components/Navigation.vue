@@ -1,12 +1,12 @@
 <template>
     <!-- Barre de navigation fixe -->
-    <nav class="barre-navigation">
+    <nav class="barre-navigation" aria-label="Navigation principal">
       <ul>
         <!--Lien de navigation-->
-        <li><a href="#je-suis">Qui suis-je ?</a></li>
-        <li><a href="#competences">Mes compétences</a></li>
-        <li><a href="#realisations">Mes réalisations</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#je-suis"  aria-label="Aller à la section Qui suis-je ?">Qui suis-je ?</a></li>
+        <li><a href="#competences" aria-label="Aller à la section Mes compétences">Mes compétences</a></li>
+        <li><a href="#realisations" aria-label="Aller à la section Mes réalisations">Mes réalisations</a></li>
+        <li><a href="#contact" aria-label="Aller à la section Contact">Contact</a></li>
       </ul>
     </nav>
   </template>
@@ -57,5 +57,3 @@
   text-decoration: underline;
 }
 </style>
-
-  

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="tool">
     <!--Ceci est la page 404 (NotFound)-->
     <router-view v-if="isNotFoundPage" />
     <!--Sinon : page normal-->
@@ -13,7 +13,7 @@
           <QuiSuisJe />
           <Competence />
           <section class="bloc-modal">
-            <h2 id="realisations">Mes réalisations</h2>
+            <h3 id="realisations">Mes réalisations</h3>
             <div class="modal">
               <Cv />
               <CahierDesCharges />
@@ -52,7 +52,7 @@ const isNotFoundPage = computed(() => route.name === 'NotFound')
 </script>
 
 <style scoped>
-h2 {
+h3 {
   color: #E6A8A8;
   font-size: 2em;         /*Augmente la taille du titre*/
   font-weight: bold;

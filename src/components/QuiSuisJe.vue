@@ -1,9 +1,9 @@
 <template>
     <div class="presentation">
         <section id="je-suis" class="presentation-container">
-            <img src="../assets/img-portfolio/photo.jpg" alt="Ma photo" class="photo-profil"/>
+            <img src="../assets/img-portfolio/photo.jpg" alt="Ma photo" class="photo-profil" width="150" height="150"/>
             <div class="contenu">
-                <h2>Qui suis-je ?</h2>
+                <h3>Qui suis-je ?</h3>
                 <p>Passionnée par le web et la technologie, je suis actuellement en formation pour devenir développeuse web. À 55 ans,
                     j'ai choisi de me reconvertir après une carrière enrichissante en tant qu'auxiliaire de vie à domicile.
                     Ce métier m'a permis de développer des qualités essentielles : l'écoute, la patience, l'empathie et une grande capacité d'adaptation.<br/>
@@ -24,9 +24,8 @@
 
 
 <style scoped>
-h2 {
+h3 {
     color: #D9D9D9;
-    font-family: 'Lobster'; /*Police*/
     font-size: 2em; /* Augmente la taille du titre */
     font-weight: bold;
     text-align: center; /* Centre le titre */ 
@@ -54,9 +53,8 @@ h2 {
 }
 
 .photo-profil {
-    width: 150px;
-    height: auto;
     border-radius: 50%;
+    height: auto;
 }
 
 .contenu {

@@ -1,7 +1,7 @@
 <template>
   <section class="entete-contenu">
     <h1>DUBOIS Céline</h1>
-    <img src="@/assets/img-portfolio/Img-acceuil.jpg" alt="Image de bienvenue" class="image-gauche" />
+    <img src="@/assets/img-portfolio/Img-acceuil.jpg" alt="Image de bienvenue" class="image-gauche" width="350" height="350" />
     <div class="texte-bienvenue">
        <h2>Bienvenue sur mon portfolio</h2>
     </div>
@@ -14,7 +14,6 @@
   color: #E6CBA8;
 }
 h1{
-  font-family: 'Lobster'; /*Police*/
   font-size: 2.5em;
   margin-bottom: 10px;    /* Réduit l'espace sous le titre */
   padding: 0;
@@ -23,14 +22,13 @@ h1{
 
 
 img {
-  width: 350px;
   margin-left: 15px;
   padding: 0;
   margin:5px 0 0 30px ;
+  height: auto;
 }
 
 .texte-bienvenue {
-  font-family: 'Lobster'; /*Police*/
   font-size: 2em;
   margin: 20px 0 0 60px ;
 }

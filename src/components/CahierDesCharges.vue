@@ -8,6 +8,8 @@
       alt="Image Cahier des charges"
       class="modal-image"
       @click="isModalOpen = true" 
+      width="250"
+      height="349"
     />
 
     <!-- Appel de la modal -->

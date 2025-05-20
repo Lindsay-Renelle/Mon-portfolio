@@ -10,6 +10,8 @@
       alt="Image Coeur à prendre"
       class="modal-image"
       @click="isModalOpen = true" 
+      width="250"
+      height="285"
     />
 
     <!-- Appel de la modal -->

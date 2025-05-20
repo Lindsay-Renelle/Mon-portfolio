@@ -11,6 +11,8 @@
       alt="Image CV"
        class="modal-image"
       @click="isModalOpen = true" 
+      width="250"
+      height="384"
     />
 
     <!-- Appel du composant modal, ouvert quand isModalOpen est true -->
@@ -37,7 +39,7 @@ const isModalOpen = ref(false)
 
 <style scoped>
 /*Style sous-titre*/
-h4 {
+h4{
   font-size: 1.5em;  /*Taille police*/
   margin-top: 5px;  /*Marge */
 }

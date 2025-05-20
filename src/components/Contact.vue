@@ -1,10 +1,12 @@
 <template>
         <section id="contact"  class="contact">
-            <h2>Contactez-moi</h2>
+            <h3>Contactez-moi</h3>
+            <!-- Formulaire.--> 
             <form>
-                <input type="text" placeholder="Nom">
+                <input type="text" placeholder="Nom" >
                 <input type="email" placeholder="Email">
                 <textarea placeholder="Message"></textarea>
+                <!--Bouton envoyer-->
                 <input type="submit" value="Envoyer">
             </form>
         </section>
@@ -13,7 +15,7 @@
 
 <style scoped>
 /* style de h2 */
-h2 {
+h3 {
     color: #C6A8E6;
     font-family: 'Lobster';         /* Police */
     font-size: 2em;                 /* Augmente la taille du titre */
@@ -57,10 +59,10 @@ h2 {
 .contact input[type="submit"] {
     width: 100%;                           /* Le bouton prend toute la largeur disponible */
     padding: 15px;                         /* Ajoute de l’espace pour le rendre plus visible */
-    font-size: 1.2em;                      /* Agrandit la taille du texte */
+    font-size: 1.5em;                      /* Agrandit la taille du texte */
     font-weight: bold;                     /* Met le texte en gras */
-    background-color: #007bff;           /* Couleur bleue du bouton */
-    color: white;                        /* Texte en blanc pour un bon contraste */
+    background-color: #0056b3;           /* Couleur bleue du bouton */
+    color:#f4D7C8;                        /* Texte en blanc pour un bon contraste */
     border: none;                          /* Supprime les bordures par défaut */
     cursor: pointer;                       /* Change le curseur */
     border-radius: 8px;                    /* Arrondit les coins */
@@ -69,7 +71,7 @@ h2 {
 
 /* EFFET DE SURVOL DU BOUTON */
 .contact input[type="submit"]:hover {
-    background-color: #0056b3; /* Change la couleur en bleu plus foncé au survol */
+    background-color: #b3d4ff; /* Change la couleur en bleu plus foncé au survol */
 }
 </style>
 
