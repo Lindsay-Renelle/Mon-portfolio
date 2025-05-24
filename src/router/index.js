@@ -19,7 +19,7 @@ import NotFoundView from '../views/NotFoundView.vue'
     {
       path: '/:pathMatch(.*)*',  // Attrape toutes les mauvaises adresses
       name: 'NotFound',
-      component: NotFoundView    // Va chercher ton composant
+      component: NotFoundView    // Va chercher mon composant
     }
   ]
   const router = createRouter({
